@@ -11,16 +11,72 @@
 <body>
     <div class="content">
         <div class="content_container">
-            <form>
+            <form action="#">
                 <label class="input_label">Body mass<input type="number" id="mass" class="kg" placeholder="kg"></label>
                 <label class="input_label">Waist circumference<input type="number" id="waist" class="circum" placeholder="cm"></label>
-                <label><input type="radio" name="gender" value="man">Man</label>
-                <label><input type="radio" name="gender" value="woman">Woman</label>
-                <button class="btn" type="submit">Calculate</button>
+                <label class="radio_label"><input type="radio" name="gender" value="man">Man</label>
+                <label class="radio_label"><input type="radio" name="gender" value="woman">Woman</label>
+                <button class="btn" type="submit" onclick="sex();">Calculate</button>
             </form>
 
-
+            <div id="abc"></div>
         </div>
     </div>
+    <script type="text/javascript">
 
-</body></html>
+
+
+            function sex(){
+                var mass = parseFloat(document.getElementById("mass").value);
+                var waist = parseFloat(document.getElementById("waist").value);
+                var gender = document.getElementsByName("gender");
+                for(i=0; i<gender.length; i++){
+                    if(gender[0].checked){
+                        var a=4.15*waist;
+                        var b=a/2.54;
+                        var c=0.082*mass*2.2;
+                        var d=b-c-98.42;
+                        var e=mass*2.2;
+                        var score=d/e*100;
+                        let count = document.getElementById("abc");
+                        count.innerHTML = "Your score is: "+score+".";
+                    }
+                    else{
+                         var a=4.15*waist;
+                        var b=a/2.54;
+                        var c=0.082*mass*2.2;
+                        var d=b-c-76.76;
+                        var e=mass*2.2;
+                        var score=d/e*100;
+                        let count = document.getElementById("abc");
+                        count.innerHTML = "Your score is: "+score+".";
+                    }
+                }
+            }
+            /**
+            if(gender==0){
+                var a=4.15*waist;
+                var b=a/2.54;
+                var c=0.082*mass*2.2;
+                var d=b-c-98.42;
+                var e=mass*2.2;
+                var score=d/e*100;
+                let count = document.getElementById("abc");
+            count.innerHTML = "Your score is: "+score+".";
+
+            }
+
+
+            //document.write(c);
+
+            //let count = document.getElementById("abc");
+            //count.innerHTML = c;
+        }
+        **/
+
+
+
+
+    </script>
+</body>
+</html>

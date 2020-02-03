@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -14,11 +14,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    font-size: 18px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .content_container {
-    width: 350px;
+    width: 800px;
     background-color: #406580;
     padding: 20px 15px;
 }
@@ -26,20 +27,38 @@ body {
 .input_label {
     display: block;
     margin: 11px 0;
+    text-align: center;
 }
 
-input[type="number"]{
+input[type="number"] {
     display: block;
     width: 40%;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 10px auto;
     font-size: 16px;
     padding: 5px 20px;
+    opacity: 0.6;
 }
 
 .btn {
-   display: block;
+    display: block;
     width: 32%;
-    margin: 15px auto;
-    font-size: 16px;
+    margin: 40px auto 0 auto;
+    font-size: 25px;
     padding: 5px 20px;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    margin: 0 10px 0 0;
+}
+
+.radio_label{
+    margin: 0 10px;
+}
+
+#score {
+    margin-top: 30px;
+    display: block;
+    height: 10px;
+    padding: 5px;
 }
